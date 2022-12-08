@@ -268,9 +268,9 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 326748506}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 144.5408, y: 254.9985, z: 0}
-  m_LocalScale: {x: 15.115226, y: 34.18126, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_LocalPosition: {x: 252, y: 307, z: 0}
+  m_LocalScale: {x: 25.11523, y: 56.795063, z: 1.6615849}
+  m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 3
@@ -435,7 +435,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1058158791}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.58365756, y: 162.2568, z: 0}
+  m_LocalPosition: {x: -5, y: 177, z: 0}
   m_LocalScale: {x: 35.019455, y: 35.019455, z: 35.019455}
   m_ConstrainProportionsScale: 1
   m_Children: []
@@ -682,7 +682,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 257.9618
+  orthographic size: 371.27655
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -706,7 +706,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1235871046}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 146.1, y: 257, z: -10}
+  m_LocalPosition: {x: 245, y: 363, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -741,8 +741,8 @@ RectTransform:
   m_GameObject: {fileID: 1785518994}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_LocalScale: {x: 2, y: 2, z: 2}
+  m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 1166466181}
   m_Father: {fileID: 2048538403}
@@ -750,7 +750,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -91.1}
+  m_AnchoredPosition: {x: -1.6726, y: -128}
   m_SizeDelta: {x: 95.2461, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1785518996
@@ -991,8 +991,8 @@ RectTransform:
   m_GameObject: {fileID: 2089182335}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_LocalScale: {x: 2, y: 2, z: 2}
+  m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 560486930}
   m_Father: {fileID: 2048538403}
@@ -1050,6 +1050,18 @@ MonoBehaviour:
       - m_Target: {fileID: 2048538404}
         m_TargetAssemblyTypeName: MainMenuManager, Assembly-CSharp
         m_MethodName: StartGame
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: audio, Assembly-CSharp
+        m_MethodName: PlayGameStartSound
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

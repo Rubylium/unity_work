@@ -1,14 +1,17 @@
 using UnityEngine;
+using UnityEngine.EventSystems;
 
 public class mouvements : MonoBehaviour
 {
-    [SerializeField] private float playerSpeed = 15.0f;
-    [SerializeField] private float jumpPower = 1.0f;
+    private float playerSpeed = 5.0f;
+    private float jumpPower = 5.0f;
+    private bool moveLeft;
+    private bool moveRight;
     
     private Rigidbody2D _playerRigidbody;
     private void Start()
     {
-        _playerRigidbody = GetComponent<Rigidbody2D>();
+        _playerRigidbody = GameObject.Find("Body").GetComponent<Rigidbody2D>();
         if (_playerRigidbody == null)
         {
             Debug.LogError("Player is missing a Rigidbody2D component");
@@ -16,15 +19,32 @@ public class mouvements : MonoBehaviour
     }
     private void Update()
     {
-        MovePlayer();
+        if(moveLeft && !moveRight)
+            _playerRigidbody.velocity = new Vector2(-1 * playerSpeed, _playerRigidbody.velocity.y); 
+ 
+        if(moveRight && !moveLeft)
+            _playerRigidbody.velocity = new Vector2(1 * playerSpeed, _playerRigidbody.velocity.y); 
+    }
+    public void Jump() => _playerRigidbody.velocity = new Vector2( 0, jumpPower);
 
-        if (Input.GetKey(KeyCode.Space))
-            Jump();
-    }
-    private void MovePlayer()
+    public void GoLeftStart()
     {
-        var horizontalInput = Input.GetAxisRaw("Horizontal");
-        _playerRigidbody.velocity = new Vector2(horizontalInput * playerSpeed, _playerRigidbody.velocity.y);
+        moveLeft = true;
     }
-    private void Jump() => _playerRigidbody.velocity = new Vector2( 0, jumpPower);
+
+    public void GoLeftStop()
+    {
+        moveLeft = false;
+    }
+    
+    public void GoRightStart()
+    {
+        moveRight = true;
+    }
+
+    public void GoRightStop()
+    {
+        moveRight = false;
+    }
+
 }
