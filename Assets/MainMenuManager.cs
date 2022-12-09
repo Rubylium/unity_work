@@ -10,6 +10,8 @@ public class MainMenuManager : MonoBehaviour
 
     public void ReturnToMainMenu() => SceneManager.LoadScene("Scenes/main_menu");
 
+    public void GoToOptionMenu() => SceneManager.LoadScene("Scenes/options");
+
     public void QuitGame()
     {
         Application.Quit();

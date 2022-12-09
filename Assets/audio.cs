@@ -16,6 +16,7 @@ public class audio : MonoBehaviour
     {
         Debug.Log("Playing audio");
         audioSource.clip = playlist[0];
+        audioSource.volume = PlayerPrefs.GetFloat("volume");
         audioSource.Play(); 
     }
 
